@@ -1,0 +1,6 @@
+{
+    "title": "Bigger Album Cover",
+    "description": "Customize album cover dimensions in the player",
+    "code": ":root{--cover-art-width:250px;--cover-art-height:250px;--cover-art-radius:8px;--cover-art-bottom:90px}.playback-bar{width:calc(100% - var(--cover-art-width) - 20px)!important;left:calc(var(--cover-art-width) + 20px)!important}.main-nowPlayingWidget-nowPlaying{height:0}.main-coverSlotCollapsed-container{bottom:var(--cover-art-bottom);border-radius:var(--cover-art-radius)}.main-coverSlotCollapsed-container .cover-art{width:var(--cover-art-width)!important;height:var(--cover-art-height)!important;border-radius:var(--cover-art-radius)}",
+    "preview": "preview.png"
+}

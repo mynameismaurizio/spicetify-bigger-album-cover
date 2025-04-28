@@ -1,0 +1,40 @@
+/*
+ * Bigger Album Cover for Spicetify
+ * Customize album cover dimensions in the player
+ * Ports the "Custom Cover Dimensions" option from Comfy to other themes
+ */
+:root {
+    --cover-art-width: 250px;    /* Album cover width */
+    --cover-art-height: 250px;   /* Album cover height */
+    --cover-art-radius: 8px;     /* Corner radius */
+    --cover-art-bottom: 90px;    /* Position from bottom */
+}
+
+/*
+ * Stops the progress bar from overlapping the cover art on themes like Sleek
+ * If your theme does not have this issue, comment this block out
+ */
+.playback-bar {
+    width: calc(100% - var(--cover-art-width) - 20px) !important;
+    left: calc(var(--cover-art-width) + 20px) !important;
+}
+
+/* Stops the div with this class from expanding and creating whitespace at the bottom */
+.main-nowPlayingWidget-nowPlaying {
+    height: 0;
+}
+
+/*
+ * Resizes the cover art with the variables in :root
+ * Code mostly borrowed from the Comfy repo
+ */
+.main-coverSlotCollapsed-container {
+    bottom: var(--cover-art-bottom);
+    border-radius: var(--cover-art-radius);
+
+    .cover-art {
+        width: var(--cover-art-width) !important;
+        height: var(--cover-art-height) !important;
+        border-radius: var(--cover-art-radius);
+    }
+}
